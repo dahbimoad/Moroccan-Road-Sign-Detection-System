@@ -1,118 +1,134 @@
 # Moroccan Road Sign Detection System
 
-This project aims to detect and interpret Moroccan road signs in real-time using computer vision and image processing techniques.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
+![OpenCV](https://img.shields.io/badge/opencv-v4.5+-green.svg)
+![PyQt5](https://img.shields.io/badge/PyQt5-v5.15+-orange.svg)
+![Flask](https://img.shields.io/badge/Flask-v3.1.0+-lightgrey.svg)
 
-## Project Overview
+A comprehensive computer vision application for detecting and classifying Moroccan road signs from images and videos. This system features multiple interfaces: a command-line tool, a desktop GUI application, and a web application.
 
-The system will:
-1. Capture video input from a camera
-2. Process frames in real-time
-3. Detect road signs using image processing techniques
-4. Classify and interpret the meaning of detected signs
-5. Display the results in a user interface
+## 🌟 Features
 
-## Project Structure
+- **Accurate Detection**: Identifies road signs in images/videos using advanced computer vision algorithms
+- **Sign Classification**: Categorizes detected signs into regulatory, warning, and information signs
+- **Multiple Interfaces**:
+  - Command-line interface for batch processing
+  - Desktop application with real-time detection
+  - Web application for easy accessibility
+- **Report Generation**: Creates detailed PDF reports with detection results
+- **Template Management**: Add and manage your own sign templates
+- **Batch Processing**: Process multiple images at once
 
-```
-traitement-image/
-├── data/                  # Training data and sign templates
-├── docs/                  # Documentation
-├── src/                   # Source code
-│   ├── preprocessing/     # Image preprocessing functions
-│   ├── detection/         # Sign detection algorithms
-│   ├── recognition/       # Sign recognition/classification
-│   ├── ui/                # User interface
-│   └── main.py            # Main application entry point
+## 📋 Requirements
 
-```
-
-## Getting Started
-
-See the [installation guide](docs/installation.md) and [usage guide](docs/usage.md) to get started.
-
-## Installation
-
-### Requirements
-
-- Python 3.7+
+- Python 3.8+
 - OpenCV 4.5+
 - NumPy
-- Additional dependencies listed in `requirements.txt`
+- PyQt5 (for desktop application)
+- Flask (for web application)
+- Additional dependencies in requirements.txt
 
-To install dependencies:
+## 🚀 Quick Start
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/dahbimoad/Moroccan-Road-Sign-Detection-System.git
+cd Moroccan-Road-Sign-Detection-System
+
+# Create a virtual environment (optional but recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### Setup for Specific Environments
-
-For GPU acceleration (optional):
-```bash
-pip install opencv-contrib-python-gpu
-```
-
-## Usage
-
-### Running the Application
-
-The system can be run in several modes:
+### Using the Command-line Interface
 
 ```bash
-# Real-time detection using webcam
-python src/main.py --mode real-time
-
-# Process a video file
-python src/main.py --mode video --input path/to/video.mp4
-
 # Process a single image
-python src/main.py --mode image --input path/to/image.jpg
+python src/main.py --input path/to/image.jpg --output path/to/output
 
-# Process multiple images in a directory
-python src/main.py --mode batch --input path/to/image/directory
+# Process multiple images
+python src/main.py --input path/to/folder --output path/to/output --batch
+
+# Process video
+python src/main.py --input path/to/video.mp4 --output path/to/output --video
 ```
 
-### Command Line Options
+### Using the Desktop Application
 
-- `--mode`: Processing mode (`real-time`, `video`, `image`, `batch`)
-- `--input`: Path to input video, image file, or directory
-- `--show-steps`: Display intermediate processing steps
-- `--save-output`: Save processed frames to output directory
-- `--output-dir`: Directory to save output frames (default: `output`)
-- `--debug`: Enable debug visualization
-- `--detection-threshold`: Confidence threshold for sign detection (default: 0.5)
-- `--generate-report`: Generate detection report
-- `--environment`: Specify environment type (`auto`, `urban`, `desert`, `normal`)
-- `--extract-templates`: Extract detected signs as templates
-- `--gpu`: Use GPU acceleration if available
+```bash
+# Launch the desktop app
+python src/ui/app.py
+```
 
-### Controls
+### Using the Web Application
 
-During real-time or video processing:
-- Press `q` to quit
-- Press `s` to save the current frame
-- Press `p` to pause/resume (video mode only)
-- Press `r` to generate a detection report (if `--generate-report` is enabled)
+```bash
+# Start the web server
+python src/web/app.py
+```
+Then open your browser and navigate to http://localhost:5000
 
-## Features
+## 📱 Interfaces
 
-### Preprocessing
-- Adaptive image enhancement based on environmental conditions
-- Shadow removal for urban scenes
-- Brightness correction for desert conditions
-- Noise reduction with edge preservation
+### Command-Line Interface
+Ideal for batch processing and integration into other workflows.
 
-### Detection
-- Color-based segmentation tuned for Moroccan road signs
-- Shape detection using contour analysis
-- Multi-scale detection for varying distances
+### Desktop Application
+Features a user-friendly interface with:
+- Real-time webcam detection
+- Image upload and processing
+- Template management
+- Settings configuration
+- Detailed detection reports
 
-### Recognition
-- Template matching for standard signs
-- Feature-based classification
-- Dynamic confidence scoring
+### Web Application
+Accessible from any browser with:
+- Simple image upload
+- Detection result visualization
+- PDF report generation
+- Mobile-friendly responsive design
 
-### Visualization
-- Real-time annotation of detected signs
-- Detailed information display (sign type, meaning, confidence)
-- Optional debug visualization
+## 📚 Documentation
+
+Detailed documentation is available in the `docs/` folder:
+- [Installation Guide](docs/installation.md)
+- [Usage Instructions](docs/usage.md)
+- [Technical Approach](docs/approach.md)
+- [Moroccan Road Signs Reference](docs/moroccan-signs.md)
+
+## 🔍 How It Works
+
+1. **Preprocessing**: Image normalization, color enhancement, and noise reduction
+2. **Detection**: Identifying potential road sign regions using shape and color-based methods
+3. **Feature Extraction**: Obtaining relevant visual features from detected regions
+4. **Classification**: Determining the type and meaning of each detected sign
+
+## 📸 Examples
+
+Example results can be found in the `output/` directory after running the application.
+
+## 👨‍💻 Author
+
+**Moad Dahbi**
+- Email: dahbimoad1@gmail.com
+- GitHub: [@dahbimoad](https://github.com/dahbimoad)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- OpenCV community for computer vision algorithms
+- PyQt5 for the desktop interface
+- Flask for the web application framework
+
+---
+
+© 2025 Moroccan Road Sign Detection System | [GitHub Repository](https://github.com/dahbimoad/Moroccan-Road-Sign-Detection-System.git)

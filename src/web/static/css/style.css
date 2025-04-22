@@ -1,0 +1,155 @@
+/* Main styling for Moroccan Road Sign Detection Application */
+
+/* Custom font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar customization */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+/* Image containers */
+.img-container {
+    position: relative;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Result images */
+.result-image {
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* Button styling */
+.btn {
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3246a8;
+    border-color: #3246a8;
+}
+
+.btn-primary:hover {
+    background-color: #253584;
+    border-color: #253584;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* Form and file upload */
+.form-control {
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #3246a8;
+    box-shadow: 0 0 0 0.2rem rgba(50, 70, 168, 0.25);
+}
+
+/* Tech icons */
+.tech-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.tech-icon i {
+    transition: transform 0.3s ease;
+}
+
+.tech-icon i:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-header h3, .card-header h4 {
+        font-size: 1.2rem;
+    }
+    
+    .result-image {
+        max-height: 300px;
+    }
+}
+
+/* Animation for loading */
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3246a8;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+    margin: 20px auto;
+}
+
+/* Image preview container */
+#preview {
+    transition: all 0.3s ease;
+}
+
+#image-preview {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* Table styling */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}

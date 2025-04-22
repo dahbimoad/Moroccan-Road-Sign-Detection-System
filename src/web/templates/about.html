@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Moroccan Road Sign Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Moroccan Road Sign Detection</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="mb-0">About the Moroccan Road Sign Detection System</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3>Project Overview</h3>
+                        <p>
+                            The Moroccan Road Sign Detection System is an advanced computer vision application designed to detect and classify
+                            road signs in Morocco. Using state-of-the-art image processing and machine learning techniques, 
+                            our system can identify various categories of road signs including regulatory, warning, and informational signs.
+                        </p>
+                        
+                        <h3>Technical Approach</h3>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-secondary text-white">
+                                        <h4 class="mb-0">Image Processing Pipeline</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <ol>
+                                            <li><strong>Preprocessing:</strong> Image normalization, color enhancement, and noise reduction</li>
+                                            <li><strong>Detection:</strong> Identifying potential road sign regions using shape and color-based methods</li>
+                                            <li><strong>Feature Extraction:</strong> Obtaining relevant visual features from detected regions</li>
+                                            <li><strong>Classification:</strong> Determining the type and meaning of each detected sign</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-secondary text-white">
+                                        <h4 class="mb-0">Key Features</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Real-time detection and classification</li>
+                                            <li>Support for a wide range of Moroccan road signs</li>
+                                            <li>High accuracy even under varying lighting conditions</li>
+                                            <li>Web interface for easy usage and result visualization</li>
+                                            <li>PDF report generation for documentation</li>
+                                            <li>API access for integration with other systems</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Use Cases</h3>
+                        <div class="row mb-4">
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5>Driver Assistance</h5>
+                                        <p>Helps drivers identify road signs, particularly useful for training and education.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5>Road Management</h5>
+                                        <p>Assists in inventorying road signs and monitoring their condition.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5>Autonomous Vehicles</h5>
+                                        <p>Provides critical input for self-driving systems operating in Morocco.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Technologies Used</h3>
+                        <div class="mb-4">
+                            <div class="row">
+                                <div class="col-md-3 mb-3 text-center">
+                                    <div class="tech-icon">
+                                        <i class="devicon-python-plain colored"></i>
+                                    </div>
+                                    <p>Python</p>
+                                </div>
+                                <div class="col-md-3 mb-3 text-center">
+                                    <div class="tech-icon">
+                                        <i class="devicon-opencv-plain colored"></i>
+                                    </div>
+                                    <p>OpenCV</p>
+                                </div>
+                                <div class="col-md-3 mb-3 text-center">
+                                    <div class="tech-icon">
+                                        <i class="devicon-flask-original"></i>
+                                    </div>
+                                    <p>Flask</p>
+                                </div>
+                                <div class="col-md-3 mb-3 text-center">
+                                    <div class="tech-icon">
+                                        <i class="devicon-numpy-original colored"></i>
+                                    </div>
+                                    <p>NumPy</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Contact Information</h3>
+                        <p>For more information, feedback, or collaboration opportunities, please contact us at: <a href="mailto:contact@moroccanroadsigns.org">contact@moroccanroadsigns.org</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2025 Moroccan Road Sign Detection System</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include devicon for technology icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</body>
+</html>
