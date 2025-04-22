@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from preprocessing.image_preprocessor import ImagePreprocessor
+from src.preprocessing.image_preprocessor import ImagePreprocessor
 
 class SignDetector:
     def __init__(self):
